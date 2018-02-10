@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.anhkhue.locationbasedservices.MapsActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.anhkhue.locationbasedservices.MapsActivity" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/ic_search"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/ic_search"
+            android:layout_toRightOf="@+id/ic_search"
+            android:hint="Enter Address, City or Zip Code"
+            android:imeOptions="actionSearch" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ic_gps"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignEnd="@+id/search_layout"
+        android:layout_alignRight="@+id/search_layout"
+        android:layout_below="@+id/search_layout"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_gps" />
+
+    <ImageView
+        android:id="@+id/ic_theme"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/search_layout"
+        android:layout_alignStart="@+id/search_layout"
+        android:layout_below="@+id/search_layout"
+        android:src="@drawable/ic_dark" />
+
+</RelativeLayout>
