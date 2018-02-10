@@ -150,8 +150,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         iconTheme.setOnClickListener(v -> {
             if (!isDark) {
                 changeTheme(R.raw.dark_theme, R.drawable.ic_gps_dark, R.drawable.ic_light);
+                isDark = true;
             } else {
                 changeTheme(R.raw.light_theme, R.drawable.ic_gps, R.drawable.ic_dark);
+                isDark = false;
             }
         });
     }
@@ -166,8 +168,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 iconGps.setImageResource(gps);
                 iconTheme.setImageResource(mode);
-
-                isDark = true;
             }
         } catch (Resources.NotFoundException e) {
             Log.e(TAG, "Resources.NotFoundException: " + e.getMessage());
